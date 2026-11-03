@@ -1,4 +1,4 @@
-// MENÚ
+// MENÚ DE NAVEGACIÓN
 
 let enlaces = document.querySelectorAll(".nav-link");
 
@@ -95,3 +95,37 @@ botones.forEach(function(boton) {
     });
 
 });
+
+// BOMBILLO MÁGICO
+
+function encenderApagar() {
+
+    let bombillo = document.getElementById("bombilloIcono");
+
+    let estado = document.getElementById("estadoBombillo");
+
+    // Verificar si el bombillo está encendido
+
+    if (bombillo.classList.contains("encendido")) {
+
+        // Apagar el bombillo
+
+        bombillo.classList.remove("encendido");
+
+        document.body.classList.remove("luz-encendida");
+
+        estado.innerHTML = "La luz está apagada";
+
+    } else {
+
+        // Encender el bombillo
+
+        bombillo.classList.add("encendido");
+
+        document.body.classList.add("luz-encendida");
+
+        estado.innerHTML = "¡La luz está encendida!";
+
+    }
+
+}

@@ -1,6 +1,4 @@
-// MENÚ DE NAVEGACIÓN
-
-console.log("Bienvenido a Luxury Cars");
+// MENÚ
 
 let enlaces = document.querySelectorAll(".nav-link");
 
@@ -18,7 +16,7 @@ enlaces.forEach(function(enlace) {
 
 });
 
-// TARJETAS DE VEHÍCULOS
+// TARJETAS
 
 let tarjetas = document.querySelectorAll(".card");
 
@@ -34,4 +32,34 @@ tarjetas.forEach(function(tarjeta) {
 
 });
 
-console.log("Tarjetas de vehículos cargadas");
+// BOTÓN DE NOVEDADES
+
+function mostrarMensaje() {
+
+    document.getElementById("resultado").innerHTML =
+        "¡Descubre los mejores autos deportivos del mundo!";
+
+}
+
+// BOTÓN CAMBIAR COLOR
+
+function cambiarColor() {
+
+    let colores = ["#fff1c1", "#e1efff", "#fce4ec", "#e5ffe5"];
+
+    let color = colores[Math.floor(Math.random() * colores.length)];
+
+    document.body.style.backgroundColor = color;
+
+}
+
+// BOTÓN MOSTRAR HORA
+
+function mostrarHora() {
+
+    let hora = new Date().toLocaleTimeString();
+
+    document.getElementById("resultado").innerHTML =
+        "La hora actual es: " + hora;
+
+}

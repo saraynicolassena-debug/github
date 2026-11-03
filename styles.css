@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.navbar {
+    background-color: #111;
+    padding: 18px;
+}
+
+.navbar-brand {
+    color: #d4af37;
+    font-size: 23px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.nav-link {
+    color: white !important;
+    margin-left: 15px;
+}
+
+.nav-link:hover {
+    color: #d4af37 !important;
+}
+
+.contenido {
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.contenido h1,
+.contenido h2 {
+    color: #222;
+}
+
+.contenido p {
+    color: #666;
+    font-size: 18px;
+}

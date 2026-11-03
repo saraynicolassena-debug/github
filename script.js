@@ -2,7 +2,6 @@
 
 console.log("Bienvenido a Luxury Cars");
 
-// Cerrar el menú al seleccionar una opción
 let enlaces = document.querySelectorAll(".nav-link");
 
 enlaces.forEach(function(enlace) {
@@ -12,10 +11,27 @@ enlaces.forEach(function(enlace) {
         let menu = document.querySelector(".navbar-collapse");
 
         if (menu.classList.contains("show")) {
-            let instancia = bootstrap.Collapse.getOrCreateInstance(menu);
-            instancia.hide();
+            bootstrap.Collapse.getOrCreateInstance(menu).hide();
         }
 
     });
 
 });
+
+// TARJETAS DE VEHÍCULOS
+
+let tarjetas = document.querySelectorAll(".card");
+
+tarjetas.forEach(function(tarjeta) {
+
+    tarjeta.addEventListener("mouseenter", function() {
+        tarjeta.style.border = "2px solid #d4af37";
+    });
+
+    tarjeta.addEventListener("mouseleave", function() {
+        tarjeta.style.border = "none";
+    });
+
+});
+
+console.log("Tarjetas de vehículos cargadas");

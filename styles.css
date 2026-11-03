@@ -39,3 +39,27 @@ body {
     color: #666;
     font-size: 18px;
 }
+
+/* TARJETAS */
+
+.card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card img {
+    height: 220px;
+    object-fit: cover;
+}
+
+.precio {
+    color: #b8962e;
+    font-weight: bold;
+}

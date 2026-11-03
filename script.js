@@ -32,7 +32,7 @@ tarjetas.forEach(function(tarjeta) {
 
 });
 
-// BOTÓN DE NOVEDADES
+// BOTONES
 
 function mostrarMensaje() {
 
@@ -40,8 +40,6 @@ function mostrarMensaje() {
         "¡Descubre los mejores autos deportivos del mundo!";
 
 }
-
-// BOTÓN CAMBIAR COLOR
 
 function cambiarColor() {
 
@@ -53,8 +51,6 @@ function cambiarColor() {
 
 }
 
-// BOTÓN MOSTRAR HORA
-
 function mostrarHora() {
 
     let hora = new Date().toLocaleTimeString();
@@ -63,3 +59,39 @@ function mostrarHora() {
         "La hora actual es: " + hora;
 
 }
+
+// FILTRO DE GALERÍA
+
+let botones = document.querySelectorAll(".filtro");
+
+let elementos = document.querySelectorAll(".elemento");
+
+botones.forEach(function(boton) {
+
+    boton.addEventListener("click", function() {
+
+        let categoria = this.getAttribute("data-filter");
+
+        botones.forEach(function(btn) {
+            btn.classList.remove("active", "btn-dark");
+            btn.classList.add("btn-outline-dark");
+        });
+
+        this.classList.add("active", "btn-dark");
+        this.classList.remove("btn-outline-dark");
+
+        elementos.forEach(function(elemento) {
+
+            let tipo = elemento.getAttribute("data-category");
+
+            if (categoria === "todos" || categoria === tipo) {
+                elemento.classList.remove("ocultar");
+            } else {
+                elemento.classList.add("ocultar");
+            }
+
+        });
+
+    });
+
+});

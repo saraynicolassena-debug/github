@@ -78,3 +78,29 @@ body {
 .btn:hover {
     transform: scale(1.05);
 }
+
+/* GALERÍA */
+
+.elemento {
+    text-align: center;
+}
+
+.elemento img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+.elemento h5 {
+    font-weight: bold;
+}
+
+.ocultar {
+    display: none;
+}
+
+.filtro {
+    margin: 5px;
+}

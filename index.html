@@ -26,7 +26,7 @@
                     <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="#vehiculos">Vehículos</a></li>
                     <li class="nav-item"><a class="nav-link" href="#botones">Botones</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
                 </ul>
             </div>
 
@@ -87,7 +87,6 @@
 
         <div class="container">
             <h2>Botones interactivos</h2>
-            <p>Prueba las diferentes funciones de nuestra página.</p>
 
             <button class="btn btn-warning m-2" onclick="mostrarMensaje()">
                 Ver novedades
@@ -106,9 +105,65 @@
 
     </section>
 
-    <section id="nosotros" class="contenido">
-        <h2>Sobre nosotros</h2>
-        <p>Somos apasionados por los automóviles de lujo.</p>
+    <!-- GALERÍA CON FILTROS -->
+    <section id="galeria" class="container py-5">
+
+        <h2 class="text-center mb-4">Galería de vehículos</h2>
+
+        <div class="text-center mb-4">
+
+            <button class="btn btn-dark filtro active" data-filter="todos">
+                Todos
+            </button>
+
+            <button class="btn btn-outline-dark filtro" data-filter="lujo">
+                Lujo
+            </button>
+
+            <button class="btn btn-outline-dark filtro" data-filter="deportivo">
+                Deportivos
+            </button>
+
+            <button class="btn btn-outline-dark filtro" data-filter="clasico">
+                Clásicos
+            </button>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-4 elemento" data-category="lujo">
+                <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800" alt="Lamborghini">
+                <h5>Lamborghini</h5>
+            </div>
+
+            <div class="col-md-4 elemento" data-category="deportivo">
+                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800" alt="Porsche">
+                <h5>Porsche</h5>
+            </div>
+
+            <div class="col-md-4 elemento" data-category="clasico">
+                <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800" alt="Clásico">
+                <h5>Clásico deportivo</h5>
+            </div>
+
+            <div class="col-md-4 elemento" data-category="lujo">
+                <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800" alt="BMW">
+                <h5>BMW</h5>
+            </div>
+
+            <div class="col-md-4 elemento" data-category="deportivo">
+                <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?w=800" alt="Deportivo">
+                <h5>Superdeportivo</h5>
+            </div>
+
+            <div class="col-md-4 elemento" data-category="clasico">
+                <img src="https://images.unsplash.com/photo-1502161254066-6c74afbf07aa?w=800" alt="Auto clásico">
+                <h5>Auto clásico</h5>
+            </div>
+
+        </div>
+
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
